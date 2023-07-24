@@ -1,7 +1,7 @@
 import io.mockk.mockk
 
-class DummyConsumerTest {
-    private val foo = DummyProducer()
+class CanReferenceProducerCommonMain {
+    private val foo = ProducerCommonMain()
 
     fun `can reference mockk`() {
         val mock = mockk<Int>()
