@@ -24,13 +24,13 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(project(":producer"))
+                implementation("io.mockk:mockk:1.13.5")
             }
         }
 
         val jvmTest by getting {
             dependencies {
-                // platform part of will be added automatically
-                implementation(project(":producer"))
+                // this should automatically pick up dependencies from commonTest
             }
         }
     }
